@@ -1,0 +1,42 @@
+ 
+Phone number ID: 738910609304201
+WhatsApp business ID: 1260593395117732 
+
+60 days access token
+EAASAvYrwZAQsBPI4KKzZCEY1iYWqYvEfHtlMaTOerHBUi7D0dFYqwJiRpxbqULmtz6HJZBnhGmkdw8MSGUiuSvArinlSt43llSe9y5kaML5fUBmts6XV7qM08woMHZBvd9hyt44Bd6kyK3v6LMgPxa2XOZCpJvwCXClYAwp2g4bYJgjCU3p3rO34VT0bK
+
+
+
+ Cluster Username: rajap535
+Cluster Password: vO7uZtx4A9TVoMeE
+
+MongoDB username: rajap535
+MongoDB Password (Format): mongodb+srv://rajap535:<db_password>@cluster0.vnfaxqc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+MongoDB connection string: mongodb+srv://rajap535:vO7uZtx4A9TVoMeE@cluster0.vnfaxqc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+
+
+
+Road Map- Target-15/8/2025
+| Step | Task                                                                        | Deadline |
+| ---- | --------------------------------------------------------------------------- | -------- |
+| 1    | Finalize WhatsApp Automation Flow (Auto-replies, Templates, Error Handling) | Day 3-4  |
+| 2    | Connect MongoDB for storing Incoming Messages & Responses                   | Day 3-4  |
+| 3    | Add Data Logging (save date, user id, message intent, response given)       | Day 5    |
+| 4    | Basic Analytics Dashboard (optional for now, but helpful)                   | Day 6-7  |
+| 5    | Polish UI/UX & Branding (Lite Version)                                      | Day 8    |
+| 6    | Stress Testing with Multiple Test Users                                     | Day 8-9  |
+| 7    | Raya Lite Soft Launch                                                       | Day 10   |
+
+
+
+Post Launch From 16/8/2025
+| Phase | Task                                                                             | Timeline             |
+| ----- | -------------------------------------------------------------------------------- | -------------------- |
+| 1     | Data Export System (MongoDB to your Local Storage)                               | Post-Launch (Week 2) |
+| 2     | Start Annotating & Labeling Important Data (Intent Recognition, Context Mapping) | Week 2-3             |
+| 3     | Create Custom Dataset for RAYA Brain (Training Purpose)                          | Week 4               |
+| 4     | Begin Small ML Models (Dialog Flow, Simple Decision Trees)                       | Week 5-6             |
+| 5     | Advanced Model (LLM Fine-Tuning if required)                                     | Month 2              |
+| 6     | Independent AI Engine (Raya Core v1.0)                                           | Month 3              |
+| 7     | Raya Core + Raya Lite Fully Integrated                                           | Month 3-4            |
+

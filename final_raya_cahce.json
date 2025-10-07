@@ -1,0 +1,806 @@
+{
+  "knowledge": {
+    "what is the big bang": {
+      "summary": "The leading cosmological model for the universe’s origin ~13.8 billion years ago: a hot, dense expansion followed by cooling and structure formation.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Big_Bang"
+      ]
+    },
+    "how old is the universe": {
+      "summary": "About 13.8 billion years old based on measurements of the cosmic microwave background and expansion rate.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Age_of_the_universe"
+      ]
+    },
+    "what is dark matter": {
+      "summary": "An unseen form of matter that interacts gravitationally; inferred from galaxy rotation curves, lensing, and CMB data.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Dark_matter"
+      ]
+    },
+    "what is dark energy": {
+      "summary": "A hypothesized energy component causing the accelerated expansion of the universe.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Dark_energy"
+      ]
+    },
+    "what is a black hole": {
+      "summary": "A region of spacetime with gravity so strong that nothing, not even light, can escape beyond the event horizon.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Black_hole"
+      ]
+    },
+    "what is a neutron star": {
+      "summary": "The compact remnant of a massive star after a supernova; incredibly dense, mostly neutrons.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Neutron_star"
+      ]
+    },
+    "what is a galaxy": {
+      "summary": "A gravitationally bound system of stars, stellar remnants, gas, dust, and dark matter; e.g., the Milky Way.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Galaxy"
+      ]
+    },
+    "what is the milky way": {
+      "summary": "Our barred spiral galaxy, about 100,000 light-years across, hosting the Solar System.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Milky_Way"
+      ]
+    },
+    "what is a supernova": {
+      "summary": "A powerful stellar explosion marking the death of a star, enriching space with heavy elements.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Supernova"
+      ]
+    },
+    "what is the cosmic microwave background": {
+      "summary": "Faint thermal radiation left over from the hot early universe, a key evidence for the Big Bang.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Cosmic_microwave_background"
+      ]
+    },
+    "what is redshift": {
+      "summary": "An increase in wavelength of light from distant objects, often due to cosmic expansion.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Redshift"
+      ]
+    },
+    "what is the hubble constant": {
+      "summary": "The current rate of expansion of the universe, measured in km/s/Mpc.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Hubble%27s_law"
+      ]
+    },
+    "what is a quasar": {
+      "summary": "An extremely luminous active galactic nucleus powered by a supermassive black hole accretion disk.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Quasar"
+      ]
+    },
+    "what is a comet": {
+      "summary": "An icy small Solar System body that releases gas and dust, forming a tail when near the Sun.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Comet"
+      ]
+    },
+    "what is an exoplanet": {
+      "summary": "A planet orbiting a star other than the Sun; thousands have been discovered by transit and radial velocity methods.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Exoplanet"
+      ]
+    },
+    "what is the kuiper belt": {
+      "summary": "A region beyond Neptune filled with icy bodies and dwarf planets like Pluto.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Kuiper_belt"
+      ]
+    },
+    "what is the oort cloud": {
+      "summary": "A hypothetical spherical shell of icy bodies surrounding the Solar System, source of long-period comets.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Oort_cloud"
+      ]
+    },
+    "what is gravitational lensing": {
+      "summary": "The deflection of light by mass, which can magnify or distort distant objects.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Gravitational_lens"
+      ]
+    },
+    "what is a pulsar": {
+      "summary": "A rapidly rotating, magnetized neutron star emitting beams of electromagnetic radiation.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Pulsar"
+      ]
+    },
+    "what is a brown dwarf": {
+      "summary": "A substellar object too low in mass to sustain sustained hydrogen fusion like stars.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Brown_dwarf"
+      ]
+    },
+    "what is the mariana trench": {
+      "summary": "The deepest oceanic trench on Earth in the western Pacific; Challenger Deep reaches nearly 11 km.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Mariana_Trench"
+      ]
+    },
+    "what are ocean currents": {
+      "summary": "Large-scale movements of seawater driven by wind, density differences, and the Coriolis effect.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ocean_current"
+      ]
+    },
+    "what is the gulf stream": {
+      "summary": "A warm Atlantic current originating in the Gulf of Mexico, strongly influencing climate.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Gulf_Stream"
+      ]
+    },
+    "what is el nino": {
+      "summary": "A periodic warming of the central and eastern tropical Pacific that alters global weather patterns.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/El_Ni%C3%B1o"
+      ]
+    },
+    "what is la nina": {
+      "summary": "A periodic cooling of the central and eastern tropical Pacific, generally opposite to El Niño effects.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/La_Ni%C3%B1a"
+      ]
+    },
+    "what is coral bleaching": {
+      "summary": "The loss of symbiotic algae from corals, often triggered by heat stress, causing whitening and potential mortality.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Coral_bleaching"
+      ]
+    },
+    "what is the great barrier reef": {
+      "summary": "The world’s largest coral reef system off Australia’s coast, visible from space.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Great_Barrier_Reef"
+      ]
+    },
+    "what is phytoplankton": {
+      "summary": "Microscopic marine algae that form the base of the oceanic food web and produce much of Earth’s oxygen.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Phytoplankton"
+      ]
+    },
+    "what is ocean acidification": {
+      "summary": "A decrease in ocean pH due to absorption of atmospheric CO₂, affecting marine organisms.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ocean_acidification"
+      ]
+    },
+    "what is a tsunami": {
+      "summary": "A series of long-wavelength sea waves caused by undersea earthquakes, landslides, or volcanic eruptions.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Tsunami"
+      ]
+    },
+    "what is the thermohaline circulation": {
+      "summary": "Global ocean conveyor driven by temperature and salinity differences, redistributing heat and nutrients.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Thermohaline_circulation"
+      ]
+    },
+    "what is a gyre": {
+      "summary": "A large system of rotating ocean currents; five major subtropical gyres dominate surface circulation.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ocean_gyre"
+      ]
+    },
+    "what is a sea mount": {
+      "summary": "An underwater mountain formed by volcanic activity, often hotspots of biodiversity.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Seamount"
+      ]
+    },
+    "what is bioluminescence": {
+      "summary": "Light production by living organisms; common in marine species like dinoflagellates and deep-sea fish.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Bioluminescence"
+      ]
+    },
+    "what is the deep sea": {
+      "summary": "Ocean zones below the photic layer with high pressure, low temperature, and unique life forms.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Deep_sea"
+      ]
+    },
+    "what is diabetes": {
+      "summary": "A group of metabolic disorders characterized by high blood glucose from insufficient insulin production or response.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Diabetes"
+      ]
+    },
+    "what is hypertension": {
+      "summary": "Chronically elevated blood pressure that increases risks of heart disease, stroke, and kidney problems.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Hypertension"
+      ]
+    },
+    "what is asthma": {
+      "summary": "A chronic inflammatory airway disease causing wheezing, shortness of breath, and coughing.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Asthma"
+      ]
+    },
+    "what is vaccination": {
+      "summary": "A method of inducing immunity by exposing the immune system to antigens in a controlled way.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Vaccination"
+      ]
+    },
+    "what is antibiotic resistance": {
+      "summary": "The ability of microbes to resist the effects of antibiotics, making infections harder to treat.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Antimicrobial_resistance"
+      ]
+    },
+    "what is bmi": {
+      "summary": "Body mass index is a weight-for-height measure used to categorize underweight, normal, overweight, and obesity.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Body_mass_index"
+      ]
+    },
+    "what is mental health": {
+      "summary": "A state of well-being in which an individual realizes abilities, copes with normal stresses, and works productively.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Mental_health"
+      ]
+    },
+    "what are benefits of exercise": {
+      "summary": "Improves cardiovascular fitness, strengthens bones and muscles, enhances mood, and reduces chronic disease risk.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Physical_exercise"
+      ]
+    },
+    "what is nutrition": {
+      "summary": "The intake and utilization of food substances by organisms for growth, metabolism, and repair.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Nutrition"
+      ]
+    },
+    "what is sleep": {
+      "summary": "A recurring, reversible state of reduced responsiveness essential for health, memory, and recovery.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Sleep"
+      ]
+    },
+    "what is depression": {
+      "summary": "A mood disorder with persistent sadness and loss of interest, affecting daily functioning.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Major_depressive_disorder"
+      ]
+    },
+    "what is cancer": {
+      "summary": "A group of diseases characterized by uncontrolled cell growth and potential spread to other body parts.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Cancer"
+      ]
+    },
+    "what is first aid": {
+      "summary": "Immediate assistance given to someone with illness or injury until full medical treatment is available.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/First_aid"
+      ]
+    },
+    "what is cpr": {
+      "summary": "Cardiopulmonary resuscitation: chest compressions and ventilations to maintain circulation and oxygenation in cardiac arrest.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Cardiopulmonary_resuscitation"
+      ]
+    },
+    "what is herd immunity": {
+      "summary": "Population-level protection that arises when a sufficient proportion is immune to an infectious disease.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Herd_immunity"
+      ]
+    },
+    "who was mahatma gandhi": {
+      "summary": "Indian leader who pioneered nonviolent resistance, helping lead India to independence from British rule.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Mahatma_Gandhi"
+      ]
+    },
+    "who was julius caesar": {
+      "summary": "Roman general and statesman whose actions led to the demise of the Roman Republic and the rise of the Empire.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Julius_Caesar"
+      ]
+    },
+    "what caused world war i": {
+      "summary": "Triggered by the assassination of Archduke Franz Ferdinand amid complex alliances, militarism, and nationalism.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/World_War_I"
+      ]
+    },
+    "what caused world war ii": {
+      "summary": "Expansionist policies of Axis powers, fallout from WWI, economic crises, and the rise of totalitarian regimes.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/World_War_II"
+      ]
+    },
+    "what was the renaissance": {
+      "summary": "A cultural rebirth in Europe (14th–17th centuries) emphasizing art, science, and humanism.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Renaissance"
+      ]
+    },
+    "what was the industrial revolution": {
+      "summary": "A period of rapid technological, economic, and social change beginning in 18th-century Britain.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Industrial_Revolution"
+      ]
+    },
+    "who was nelson mandela": {
+      "summary": "Anti-apartheid revolutionary and first Black president of South Africa (1994–1999).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Nelson_Mandela"
+      ]
+    },
+    "what was the cold war": {
+      "summary": "Geopolitical tension between the US and USSR and their allies, roughly 1947–1991.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Cold_War"
+      ]
+    },
+    "who was cleopatra": {
+      "summary": "Last active ruler of the Ptolemaic Kingdom of Egypt, known for political alliances with Julius Caesar and Mark Antony.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Cleopatra"
+      ]
+    },
+    "what is the silk road": {
+      "summary": "Ancient trade routes connecting East and West, enabling exchange of goods, culture, and ideas.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Silk_Road"
+      ]
+    },
+    "who was leonardo da vinci": {
+      "summary": "Renaissance polymath known for art (Mona Lisa), inventions, anatomy, and scientific studies.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Leonardo_da_Vinci"
+      ]
+    },
+    "what was the french revolution": {
+      "summary": "A period of radical social and political change in France (1789–1799) that ended the monarchy.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/French_Revolution"
+      ]
+    },
+    "who was pablo escobar": {
+      "summary": "Colombian drug lord who led the Medellín Cartel; killed in 1993 in Medellín.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Pablo_Escobar"
+      ]
+    },
+    "who was john f kennedy": {
+      "summary": "35th president of the United States; assassinated in Dallas on November 22, 1963.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/John_F._Kennedy"
+      ]
+    },
+    "what was the apollo 11 mission": {
+      "summary": "1969 NASA mission that achieved the first crewed Moon landing (Neil Armstrong and Buzz Aldrin).",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Apollo_11"
+      ]
+    },
+    "what is plate tectonics": {
+      "summary": "The theory describing the movement of Earth’s lithospheric plates over the asthenosphere.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Plate_tectonics"
+      ]
+    },
+    "what is a volcano": {
+      "summary": "A rupture in Earth’s crust from which lava, ash, and gases erupt.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Volcano"
+      ]
+    },
+    "what causes earthquakes": {
+      "summary": "Sudden slip along faults due to accumulated tectonic stresses releasing seismic energy.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Earthquake"
+      ]
+    },
+    "what is the atmosphere": {
+      "summary": "A multilayered envelope of gases around Earth; mostly nitrogen and oxygen.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Atmosphere_of_Earth"
+      ]
+    },
+    "what is the greenhouse effect": {
+      "summary": "Warming of Earth’s surface due to gases trapping infrared radiation.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Greenhouse_effect"
+      ]
+    },
+    "what is climate change": {
+      "summary": "Long-term shifts in temperature and weather patterns; recent trends largely driven by human activity.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Climate_change"
+      ]
+    },
+    "what is the water cycle": {
+      "summary": "Continuous movement of water through evaporation, condensation, precipitation, and runoff.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Water_cycle"
+      ]
+    },
+    "what is weather vs climate": {
+      "summary": "Weather: short-term atmospheric conditions; climate: long-term patterns and averages.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Weather",
+        "https://en.wikipedia.org/wiki/Climate"
+      ]
+    },
+    "what is soil": {
+      "summary": "A mixture of minerals, organic matter, gases, liquids, and organisms that supports life.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Soil"
+      ]
+    },
+    "what is biodiversity": {
+      "summary": "Variety of life across genes, species, and ecosystems; crucial for resilience and services.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Biodiversity"
+      ]
+    },
+    "what is the himalayas": {
+      "summary": "A vast mountain range in Asia separating the plains of India from the Tibetan Plateau; includes Everest.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Himalayas"
+      ]
+    },
+    "what is erosion": {
+      "summary": "The removal and transport of soil and rock by wind, water, ice, or gravity.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Erosion"
+      ]
+    },
+    "what is a desert": {
+      "summary": "An arid region with scarce precipitation and specialized ecosystems.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Desert"
+      ]
+    },
+    "what is the ozone layer": {
+      "summary": "A stratospheric region rich in ozone that absorbs most harmful UV radiation.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ozone_layer"
+      ]
+    },
+    "what is the carbon cycle": {
+      "summary": "The biogeochemical cycle of carbon among atmosphere, biosphere, oceans, and geosphere.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Carbon_cycle"
+      ]
+    },
+    "who discovered gravity": {
+      "summary": "Isaac Newton described universal gravitation in 1687; Einstein later reframed gravity as spacetime curvature.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Isaac_Newton",
+        "https://en.wikipedia.org/wiki/General_relativity"
+      ]
+    },
+    "what is the scientific method": {
+      "summary": "A systematic process of observation, hypothesis, experimentation, analysis, and refinement.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Scientific_method"
+      ]
+    },
+    "what is quantum mechanics": {
+      "summary": "Physics of the very small: wave–particle duality, uncertainty, quantization, and superposition.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Quantum_mechanics"
+      ]
+    },
+    "what is relativity": {
+      "summary": "Einstein’s special and general theories describing spacetime, motion, and gravity.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Theory_of_relativity"
+      ]
+    },
+    "what is thermodynamics": {
+      "summary": "Study of heat, work, temperature, and energy; governed by four fundamental laws.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Thermodynamics"
+      ]
+    },
+    "what is evolution": {
+      "summary": "Change in heritable characteristics of biological populations over generations via mechanisms like natural selection.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Evolution"
+      ]
+    },
+    "what is dna": {
+      "summary": "Deoxyribonucleic acid, the molecule carrying genetic information in living organisms.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/DNA"
+      ]
+    },
+    "what is an atom": {
+      "summary": "The smallest unit of ordinary matter, composed of protons, neutrons, and electrons.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Atom"
+      ]
+    },
+    "what is a molecule": {
+      "summary": "Two or more atoms bonded together; the chemical building blocks of substances.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Molecule"
+      ]
+    },
+    "what is photosynthesis": {
+      "summary": "The process by which plants and some microbes convert light energy into chemical energy.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Photosynthesis"
+      ]
+    },
+    "what is electricity": {
+      "summary": "A set of phenomena associated with the presence and motion of electric charge.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Electricity"
+      ]
+    },
+    "what is a magnet": {
+      "summary": "An object or material that produces a magnetic field and can attract ferromagnetic materials.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Magnet"
+      ]
+    },
+    "what is a vaccine": {
+      "summary": "A biological preparation that provides active acquired immunity to a particular infectious disease.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Vaccine"
+      ]
+    },
+    "what is ai": {
+      "summary": "Artificial intelligence: systems that perform tasks requiring human-like intelligence, such as learning and reasoning.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Artificial_intelligence"
+      ]
+    },
+    "what is machine learning": {
+      "summary": "A subset of AI focused on algorithms that improve automatically through experience and data.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Machine_learning"
+      ]
+    },
+    "what is the capital of france": {
+      "summary": "Paris is the capital and largest city of France.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Paris"
+      ]
+    },
+    "what is the capital of india": {
+      "summary": "New Delhi is the capital of India, within the National Capital Territory of Delhi.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/New_Delhi"
+      ]
+    },
+    "what is the longest river": {
+      "summary": "The Nile and Amazon are contenders; Amazon is longest by some measurements, Nile by others.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_longest_rivers_on_Earth"
+      ]
+    },
+    "what is the largest ocean": {
+      "summary": "The Pacific Ocean is the largest and deepest ocean on Earth.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Pacific_Ocean"
+      ]
+    },
+    "what is a continent": {
+      "summary": "One of Earth’s large continuous landmasses; commonly seven: Africa, Antarctica, Asia, Europe, North America, Oceania, South America.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Continent"
+      ]
+    },
+    "what is the sahara desert": {
+      "summary": "The largest hot desert, covering much of North Africa.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Sahara"
+      ]
+    },
+    "what is the great lakes": {
+      "summary": "Five large interconnected freshwater lakes in North America: Superior, Michigan, Huron, Erie, Ontario.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Great_Lakes"
+      ]
+    },
+    "what is the ring of fire": {
+      "summary": "A major area in the Pacific Basin with many earthquakes and volcanic eruptions.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ring_of_Fire"
+      ]
+    },
+    "what is a fjord": {
+      "summary": "A long, deep, narrow body of water reaching far inland, carved by glaciers.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Fjord"
+      ]
+    },
+    "what is a delta": {
+      "summary": "A landform at a river mouth created by deposition of sediment carried by the river.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/River_delta"
+      ]
+    },
+    "what is the himalaya rain shadow": {
+      "summary": "Arid conditions north of the Himalayas due to moisture being blocked and precipitated on the southern slopes.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Rain_shadow"
+      ]
+    },
+    "what is monsoon": {
+      "summary": "A seasonal reversing wind accompanied by changes in precipitation, prominent in South Asia.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Monsoon"
+      ]
+    },
+    "what is the arctic circle": {
+      "summary": "A latitude line (~66.5° N) marking the region with polar day/night phenomena.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Arctic_Circle"
+      ]
+    },
+    "what is latitude and longitude": {
+      "summary": "A coordinate system to specify locations on Earth’s surface using angular measurements.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Geographic_coordinate_system"
+      ]
+    },
+    "what is gdp per capita": {
+      "summary": "Economic output per person; a proxy for average income and standard of living.",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Gross_domestic_product"
+      ]
+    }
+  },
+  "runtime": {
+    "when was he born": {
+      "summary": "Ambiguous query that previously matched a music album; needs entity context.",
+      "sources": []
+    },
+    "sun": {
+      "summary": "Ambiguous token—engine matched 'son' instead of the star; disambiguate by domain.",
+      "sources": []
+    },
+    "elon musk son": {
+      "summary": "QA pipeline returned a relative instead of biography; ensure intent classification.",
+      "sources": []
+    },
+    "red watermelon emoji explosion": {
+      "summary": "Nonsensical query; flag for guardrail and humor fallback.",
+      "sources": []
+    },
+    "uk prime minister": {
+      "summary": "Time-sensitive; distinguish current officeholder vs. office definition.",
+      "sources": []
+    },
+    "when he died": {
+      "summary": "Entity missing; follow-up question should be triggered.",
+      "sources": []
+    },
+    "tme": {
+      "summary": "Likely 'time' typo; route through autocorrect before lookup.",
+      "sources": []
+    },
+    "a sun": {
+      "summary": "Ambiguous—match astronomy object over film title using domain hint.",
+      "sources": []
+    }
+  },
+  "meta": {
+    "built_at": "2025-08-27T08:55:33.801222Z",
+    "counts": {
+      "knowledge_entries": 110,
+      "runtime_entries": 8
+    },
+    "sections": [
+      "cosmos",
+      "ocean",
+      "health",
+      "history",
+      "earth",
+      "science",
+      "geography"
+    ]
+  },
+  "how old is the universe::fact": {
+    "answer": "Local notes:\nhow old is the universe\n\nReference:\nThe Urantia Book (sometimes called The Urantia Papers or The Fifth Epochal Revelation) is a spiritual, philosophical, and religious book that originated in Chicago, Illinois, United States sometime between 1924 and 1955.\nThe text, which claims to have been composed by celestial beings, introduces the word \"Urantia\" as the name of the planet Earth and states that its intent is to \"present enlarged concepts and advanced truth.\" The book aims to unite religion, science, and philosophy. Its large amount of content on topics of interest to science is unique among documents said to have been received from celestial beings.",
+    "sources": {
+      "custom_db": true,
+      "wikipedia": true
+    }
+  },
+  "dark energy::fact": {
+    "answer": "Local notes:\nwhat is dark energy\n\nReference:\nIn physical cosmology and astronomy, dark energy is a proposed form of energy that affects the universe on the largest scales. Its primary effect is to drive the accelerating expansion of the universe. It also slows the rate of structure formation.\n\nQa:\nRAYA: a proposed form of energy that affects the universe on the largest scales",
+    "sources": {
+      "custom_db": true,
+      "wikipedia": true,
+      "qa": true
+    }
+  },
+  "a blak hole::fact": {
+    "answer": "Local notes:\nwhat is a blak hole\n\nReference:\nUntil the Day is the only studio album by American rapper Nonchalant. It was released on March 26, 1996, via MCA Records. Recording sessions took place at B.L.A.K. Hole Studios and Horizon Studios in Capitol Heights, Maryland, at Cue Recording Studios in Falls Church, Virginia and at Talamasca Sound in Glen Cove, New York.",
+    "sources": {
+      "custom_db": true,
+      "wikipedia": true
+    }
+  },
+  "dfg::fact": {
+    "answer": "Local notes:\ndfg\n\nReference:\nFalun Gong, also called Falun Dafa, is a new religious movement founded by its leader Li Hongzhi in China in the early 1990s. Falun Gong has its global headquarters in Dragon Springs, a 173-hectare (427-acre) compound in Deerpark, New York, United States, near the residence of Li.\nLed by Li Hongzhi, who is viewed by adherents as a god-like figure, Falun Gong practitioners operate a variety of organizations in the United States and elsewhere, including the dance troupe Shen Yun.\n\nQa:\nRAYA: Days for Girls",
+    "sources": {
+      "custom_db": true,
+      "wikipedia": true,
+      "qa": true
+    }
+  },
+  "who invented zero::fact": {
+    "answer": "Local notes:\nwho invented Zero\n\nReference:\nThis list of Indian inventions and discoveries details the inventions, scientific discoveries and contributions of India, including those from the historic Indian subcontinent and the modern-day Republic of India. It draws from the whole cultural and technological \nof India|cartography, metallurgy, logic, mathematics, metrology and mineralogy were among the branches of study pursued by its scholars. During recent times science and technology in the Republic of India has also focused on automobile engineering, information technology, communications as well as research into space and polar technology.",
+    "sources": {
+      "custom_db": true,
+      "wikipedia": true
+    }
+  },
+  "the capital of russia::fact": {
+    "answer": "Local notes:\nthe capital of Russia\n\nReference:\nMoscow is the capital and largest city of Russia, standing on the Moskva River in Central Russia. It has a population estimated at over 13 million residents within the city limits, over 19.1 million residents in the urban area, and over 21.5 million residents in its metropolitan area. The city covers an area of 2,511 square kilometers (970 sq mi), while the urban area covers 5,891 square kilometers (2,275 sq mi), and the metropolitan area covers over 26,000 square kilometers (10,000 sq mi).",
+    "sources": {
+      "custom_db": true,
+      "wikipedia": true
+    }
+  },
+  "the second law of einstein::fact": {
+    "answer": "Local notes:\nwhat is the second law of Einstein\n\nReference:\nThe Einstein family is the family of physicist Albert Einstein (1879–1955). Einstein's fourth-great-grandfather, Jakob Weil, was his oldest recorded relative, born in the late 17th century, and the family continues to this day. Albert Einstein's second-great-grandfather, Löb Moses Sontheimer (1745–1831), was also the grandfather of the tenor Heinrich Sontheim (1820–1912) of Stuttgart.\n\nQa:\nRAYA: photoelectric effect",
+    "sources": {
+      "custom_db": true,
+      "wikipedia": true,
+      "qa": true
+    }
+  },
+  "gravitational force::fact": {
+    "answer": "Local notes:\nwhat is gravitational force\n\nReference:\nNewton's law of universal gravitation describes gravity as a force by stating that every particle attracts every other particle in the universe with a force that is proportional to the product of their masses and inversely proportional to the square of the distance between their centers of mass. Separated objects attract and are attracted as if all their mass were concentrated at their centers. The publication of the law has become known as the \"first great unification\", as it marked the unification of the previously described phenomena of gravity on Earth with known astronomical behaviors.\n\nQa:\nRAYA: F",
+    "sources": {
+      "custom_db": true,
+      "wikipedia": true,
+      "qa": true
+    }
+  },
+  "how can we deal with natural disasters in near future::fact": {
+    "answer": "Local notes:\nhow can we deal with Natural Disasters in near future\n\nReference:\nFossil Future: Why Global Human Flourishing Requires More Oil, Coal, and Natural Gas–Not Less is a 2022 book by Alex Epstein that argues in support of fossil fuels as being essential for human flourishing. The book also criticizes other people labeled as \"experts\" by what Epstein calls the \"knowledge system\" (the mainstream media largely), who have often been wrong in their predictions about climate catastrophe, but that are still trusted as \"experts\" by that system of information dissemination.\n\n\n== Content ==\n\n\n=== Part 1 ===\n\n\n==== Chapter 1. ====",
+    "sources": {
+      "custom_db": true,
+      "wikipedia": true
+    }
+  },
+  "the latest news about russia-ukraine war::news": {
+    "answer": "Local notes:\nthe latest news about Russia-Ukraine war\n\nReference:\nThere have been several rounds of peace talks to end the Russian invasion of Ukraine since it began in February 2022. Russia's president Vladimir Putin seeks recognition of all occupied land as Russian, for Russia to be given all of the regions it claims but does not fully occupy, guarantees that Ukraine will never join NATO, curtailment of Ukraine's military, and the lifting of sanctions against Russia. Ukraine's president Volodymyr Zelenskyy seeks a full withdrawal of Russian troops, the return of prisoners and kidnapped Ukrainian children, prosecution of Russian leaders for war crimes, and security guarantees to prevent further Russian aggression.\n\nNews hits:\n• A pregnant woman's diary of escape from war zone: 'I prayed the baby wouldn't come' — BBC World\n • Russia-Ukraine war: List of key events, day 1,281 — Al Jazeera\n • \"Modi's War\": Trump's Advisor Claims India Linked To Russia-Ukraine Conflict — NDTV Top",
+    "sources": {
+      "custom_db": true,
+      "wikipedia": true,
+      "news": true
+    }
+  },
+  "evolution::fact": {
+    "answer": "Local notes:\nwhat is evolution\n\nReference:\nIn political science, a revolution (Latin: revolutio, 'a turn around') is a rapid, fundamental transformation of a society's class, state, ethnic or religious structures. According to sociologist Jack Goldstone, all revolutions contain \"a common set of elements at their core: (a) efforts to change the political regime that draw on a competing vision (or visions) of a just order, (b) a notable degree of informal or formal mass mobilization, and (c) efforts to force change through noninstitutionalized actions such as mass demonstrations, protests, strikes, or violence.\"\nRevolutions have occurred throughout human history and varied in their methods, durations and outcomes. Some revolutions started with peasant uprisings or guerrilla warfare on the periphery of a country; others started with urban insurrection aimed at seizing the country's capital city.\n\nQa:\n[QA Engine failed: name 'answer_question' is not defined]",
+    "sources": {
+      "custom_db": true,
+      "wikipedia": true,
+      "qa": true
+    }
+  },
+  "c:\\users\\rd\\appdata\\local\\programs\\python\\python313\\python.exe \"c:/users/rd/onedrive/desktop/india search/python/v.e.d.a/raya.py\"::fact": {
+    "answer": "Local notes:\nC:\\Users\\RD\\AppData\\Local\\Programs\\Python\\Python313\\python.exe \"c:/Users/RD/OneDrive/Desktop/India Search/python/V.E.D.A/RAYA.py\"\n\nQa:\n[QA Engine failed: name 'answer_question' is not defined]",
+    "sources": {
+      "custom_db": true,
+      "qa": true
+    }
+  }
+}
