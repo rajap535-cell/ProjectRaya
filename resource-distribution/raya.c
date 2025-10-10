@@ -135,19 +135,53 @@ int waterDistributionPerCapitaForIndia(){
     double per_day_changes = (expecter_change_perYear)/365;
     double per_capita_availibility = (3838 - (per_day_changes * z));
 
-    if(y2 < 2025){
-        printf("invalit input, Please input year ahead of 2025\n");
+    if(y2 < 2025 && y2 < 2036){
+        printf("invalit input, Please input year ahead of 2025\n\n");
         return 0;
     }
         
 
-    printf("Water available in India on %d/%d/%d is/will be in litre = %.2lf", d2, m2, y2, per_capita_availibility);
+    printf("Water available in India on %d/%d/%d = %.2lf", d2, m2, y2, per_capita_availibility);
     printf("litre\n");
     printf("This data is calculated on projected data by Ministry of water - Govt of India for 2035\n\n");
     return 0;
 }
 
-int main(){
+int population(){
+    long population_2025 = 1467335156;
+    long population =  population_2025;
+    int population_year;
+    float percentage_change[10] = {0.88, 0.87, 0.86, 0.84, 0.82, 0.78, 0.71, 0.72, 0.71, 0.71}; //yearly percentage change  given for 2026 t0 2035
+
+    printf("which year population you want to know, Please enter that year:- ");
+    scanf("%d", &population_year);
+
+    if(population_year == 2025){
+        printf("population of 2025 = %ld according to United Nation Population Devision and world Bank prediction estimates ", population);
+    }
+
+    else if(population_year < 2036 && population_year > 2025){
+        for(int i = 2026; i <= population_year; i++ ){
+            population = population + (population_2025 * percentage_change[population_year - 2026])/100;
+        }
+        printf("population of %d = %ld \nAbove data is based on United Nation Population Devision and world Bank prediction estimates \n\n", population_year, population);
+    }
+
+    else{
+        printf("We don't have accurate estimate data for %d , after seeing decreasing fertility trends.", population_year);
+        printf("It is estimated by national and internaional organisations population of India will start to decrease from 2060.");
+        printf("So, now, We can provide data here till 2060. Thank You!\n\n");
+    }
+    return 0;
+}
+
+int resourceDistribution(){
     waterDistributionPerCapitaForIndia();
+    population();
+    return 0;
+}
+
+int main(){
+    resourceDistribution();
     return 0;
 }
