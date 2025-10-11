@@ -135,7 +135,7 @@ int waterDistributionPerCapitaForIndia(){
     double per_day_changes = (expecter_change_perYear)/365;
     double per_capita_availibility = (3838 - (per_day_changes * z));
 
-    if(y2 < 2025 && y2 < 2036){
+    if(y2 < 2025 || y2 > 2035){
         printf("invalit input, Please input year ahead of 2025\n\n");
         return 0;
     }
@@ -148,16 +148,16 @@ int waterDistributionPerCapitaForIndia(){
 }
 
 int population(){
+    int population_year;
     long population_2025 = 1467335156;
     long population =  population_2025;
-    int population_year;
     float percentage_change[10] = {0.88, 0.87, 0.86, 0.84, 0.82, 0.78, 0.71, 0.72, 0.71, 0.71}; //yearly percentage change  given for 2026 t0 2035
 
-    printf("which year population you want to know, Please enter that year:- ");
+    printf("which year population you want to know, Please enter the year:- ");
     scanf("%d", &population_year);
 
     if(population_year == 2025){
-        printf("population of 2025 = %ld according to United Nation Population Devision and world Bank prediction estimates ", population);
+        printf("population of 2025 = %ld according to United Nation Population Devision and world Bank prediction estimates\n\n", population);
     }
 
     else if(population_year < 2036 && population_year > 2025){
@@ -175,10 +175,82 @@ int population(){
     return 0;
 }
 
+int waterCrisis(){
+    int demandYear;
+    double waterDemandForAgri = 611000000000000;
+    double waterDemandForIndustries = 67000000000000;
+    double waterDemandForEnergy = 33000000000000;
+    double waterDemandForDomestic = 73000000000000;
+    double waterDemandForOtherUses = 70000000000000;
+
+    long population= 1467335156;
+    float percentage_change[11] = {0.88, 0.87, 0.86, 0.84, 0.82, 0.78, 0.71, 0.72, 0.71, 0.71};
+    
+    double waterAvailability = 3838 * population;
+    double perCapitaWaterAvailibility;
+
+
+    printf("Enter the Year for which you want to know water crisis details :- ");
+    scanf("%d", &demandYear);
+
+    int waterDemandPerCapita_Rural2025 = 55;  //It is set by Ministry of Urban and Housing Affairs
+    int waterDemandPerCapita_Urban2025 = 135; // It is set by Ministry of JalShakti
+
+    if(demandYear <2025 || demandYear > 2035){
+        printf("Please give year between 2025 to 2035. For now, We don't have data beyond it. We will make it available very soon. Thank You!");
+    }
+    else{
+        for(int i = 2026; i <= demandYear; i++ ){
+
+        waterDemandForAgri = waterDemandForAgri + waterDemandForAgri * 0.92 / 100; 
+        waterDemandForIndustries = waterDemandForIndustries + waterDemandForIndustries * 1.92 / 100;
+        waterDemandForEnergy = waterDemandForEnergy + waterDemandForEnergy * 6.58 / 100;
+        waterDemandForDomestic = waterDemandForDomestic + waterDemandForDomestic * 1.056 / 100;
+        waterDemandForOtherUses = waterDemandForOtherUses + waterDemandForOtherUses * 1.34 /100;
+        waterAvailability = waterAvailability - waterAvailability * 0.91/100;
+        population = population + (population * percentage_change[demandYear - 2026])/100;
+     }
+    }
+    
+    double totalDemand = waterDemandForAgri + waterDemandForIndustries + waterDemandForEnergy + waterDemandForDomestic + waterDemandForOtherUses;
+    double perCapitaWaterAvailibilityDomestic = waterAvailability / population - (totalDemand - waterDemandForDomestic) / (365 * population);
+
+    printf("Per capita water availability for Domestic Use for %d = %.2lf litre\n", demandYear, perCapitaWaterAvailibilityDomestic);
+    printf("Water Demand for Domestic Use for %d = %.2lf litre\n", demandYear, (waterDemandForDomestic/365)/population);
+
+    if(perCapitaWaterAvailibilityDomestic < (waterDemandForDomestic/365)/population){
+        printf("Water Crisis! We even donot have sufficient water for domestic use. Please, start water harvesting method and other methods to tackle water crisis. \nAnd Also donot waste water! Please, save water, save life!\n\n");
+    }
+    else{
+        printf("Presently, we have sufficient water for domectic use but we should cautions about future. So, please don't waste water! and start to save water!\nNote: This is average data. Water availability can be vary region to region.\n\n");
+    }
+
+    printf("Per capita total water availability (including for industries, agriculture, energy generation, domestic use etc.) for %d = %.2lf litre\n", demandYear, waterAvailability / population);
+    printf("Per capita total water Demand (including for industries, agriculture, energy generation, domestic use etc.) %d = %.2lf litre\n", demandYear, (totalDemand / 365)/ population);
+
+    if((totalDemand / 365)/ population >  waterAvailability){
+        printf("Water Crisis!  Urgent Action Needed. Please, Don't waste water! and start to save water!\n\n");
+    }
+    else{
+        printf("Presently, we have sufficient water but we should cautions about future.So, please don't waste water! and start to save water!\nNote: This is average data. Water availability can be vary region to region.\n\n");
+    }
+
+    printf("Average per person per day demand for domestic use is set  for Rural Area =  %d litre  According to Ministry of Urban and Housing Affairs\n",waterDemandPerCapita_Rural2025);
+    printf("Average per person per day demand for domestic use is set for Urban Area =  %d litre  According to Ministry of Urban and Housing Affairs\n\n",waterDemandPerCapita_Urban2025 );
+
+    return 0;
+}
+
 int resourceDistribution(){
+    int a;
     waterDistributionPerCapitaForIndia();
     population();
+    waterCrisis();
     return 0;
+}
+
+int regionalVariation(){
+   return 0; 
 }
 
 int main(){
