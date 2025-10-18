@@ -1,0 +1,11 @@
+sentence-transformers
+feedparser
+requests
+wikipedia
+pywhatkit
+pyfiglet
+pygame
+Pillow
+beautifulsoup4
+colorama
+PyPDF2
