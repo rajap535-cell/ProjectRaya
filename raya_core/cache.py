@@ -36,3 +36,16 @@ def cache_put(query: str, answer: str, sources: Dict[str, bool], intent: str = "
             json.dump(_CACHE, f, ensure_ascii=False, indent=2)
     except Exception:
         pass
+def load_cache():
+    """Return the entire cache dict."""
+    return _CACHE
+
+def save_cache(data):
+    """Overwrite the cache file with provided data."""
+    global _CACHE
+    _CACHE = data
+    try:
+        with open(CACHE_FILE, "w", encoding="utf-8") as f:
+            json.dump(_CACHE, f, ensure_ascii=False, indent=2)
+    except Exception as e:
+        print(f"[CACHE] save_cache error: {e}")
