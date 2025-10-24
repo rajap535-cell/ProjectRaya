@@ -1,4 +1,4 @@
-# Source weights / priorities and cache path
+#cionfig.py Source weights / priorities and cache path
 CACHE_PATH = "final_raya_cache.json"
 
 # Priority used by aggregator (higher = preferred)
@@ -14,3 +14,6 @@ SOURCE_WEIGHTS = {
 SUMMARY_SENTENCES = 3
 
 ENGINE_ORDER = ["qa", "local", "news", "wikipedia", "llm"]
+
+# Number of sentences for Wikipedia fallback
+WIKI_SENTENCES = 2

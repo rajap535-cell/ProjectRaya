@@ -19,6 +19,10 @@ from heapq import nlargest
 from bs4 import BeautifulSoup
 from colorama import init, Fore
 import PyPDF2
+import sys, os
+sys.path.append(os.path.join(os.path.dirname(__file__), 'raya_core'))
+from raya_core.orchestrator import ask_raya
+
 # -------------------------
 # Robust imports: prefer raya_core package if present, else local modules.
 # -------------------------
@@ -663,55 +667,24 @@ def main():
             continue
 
         # ---- All other queries: delegate to QA engine or pipeline ----
-        ans = None
-        out = None
+        try:
+            ans_obj = ask_raya(user_input)  # Returns object with .text
+            out = f"RAYA SAY: {ans_obj.text}"
+        except Exception as e:
+            print(f"[ORCHESTRATOR] error: {e}")
+            out = f"RAYA SAY: Sorry, I don't know the answer to that."
+
+        print(out)
+        save_conversation(user_input, out, message_type="text")
 
         # 1) Try QA engine (if available)
         if answer_question_func:
             try:
                 qa_res = answer_question_func(user_input)
-                # qa_engine returns an object with .answer or .snippet or similar
-                if qa_res:
-                    # accepted variants: dataclass QAResult in your qa_engine
-                    answer_text = getattr(qa_res, "answer", None) or getattr(qa_res, "snippet", None) or getattr(qa_res, "text", None)
-                    if answer_text:
-                        ans = answer_text
-            except Exception as e:
-                # QA engine failed; we'll fallback to pipeline
-                print(f"[QA] engine error: {e}")
-                ans = None
-
-        # 2) If QA gave nothing, call respond_to_query (pipeline) if available
-        if not ans and respond_to_query:
-            try:
-                pipeline_out = respond_to_query(user_input, DB_FILE)
-                # pipeline is expected to return formatted string or RAYA: prefixed string
-                if pipeline_out:
-                    ans = pipeline_out
-            except Exception as e:
-                print(f"[PIPELINE] error: {e}")
-                ans = None
-
-        # 3) As a final fallback use wikipedia.summary (if possible)
-        if not ans:
-            try:
-                wikipedia.set_lang("en")
-                wiki_summary = wikipedia.summary(user_input, sentences=2)
-                if wiki_summary:
-                    ans = wiki_summary
-            except Exception:
-                ans = None
-
-        if not ans:
-            out = f"RAYA SAY: Sorry, I don't know the answer to that."
-        else:
-            # If ans is already prefixed with RAYA or RAYA SAY use it as-is
-            if isinstance(ans, str) and (ans.strip().startswith("RAYA:") or ans.strip().startswith("RAYA SAY:")):
-                out = ans.strip()
-            else:
+                # qa_engine returns an object wit-
                 out = f"RAYA SAY: {ans}"
-
-        print(out)
+            finally: 
+                print(out)
         save_conversation(user_input, out, message_type="text")
 if __name__ == "__main__":
     main()
