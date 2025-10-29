@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include<stdlib.h>
 
 int daysInMonth(int n){
     if( n == 2){
@@ -136,7 +137,7 @@ int waterDistributionPerCapitaForIndia(){
     double per_capita_availibility = (3838 - (per_day_changes * z));
 
     if(y2 < 2025 || y2 > 2035){
-        printf("invalit input, Please input year ahead of 2025\n\n");
+        printf("invalit input, Please input year between 2025 and 2035\n\n");
         return 0;
     }
         
@@ -241,16 +242,45 @@ int waterCrisis(){
     return 0;
 }
 
+void rainfall_for_year(){
+    FILE *fp = fopen("RAI_tagged_crisis_surplus.csv", "r");
+    if (fp == NULL) {
+        perror("Error opening file");
+        exit(EXIT_FAILURE);
+    }
+    char line[256];
+    fgets(line, sizeof(line), fp); 
+    int x;
+    printf("Enter the Year : ");
+    scanf("%d", &x);
+
+    while (fgets(line, sizeof(line), fp)) {
+        int year;
+        double ENSO, IOD, SST_IO, DeltaT, AOD, Cyclones, LandUse, FiveYear_MA, RAI;
+        char tag[10];
+
+        sscanf(line, "%d,%lf,%lf,%lf,%lf,%lf,%lf,%lf,%lf,%lf,%s", &year, &ENSO, &IOD, &SST_IO, &DeltaT, &AOD, &Cyclones, &LandUse, &RAI, &FiveYear_MA, tag);
+        if((year == (x -2024)) && (x < 2125) && (x > 2024)){
+            printf("Rainfall data with data of various factors that affect rainfall for %d\n(1) ENSO(El Niño-Southern Oscillation):- %.2lf\n(2) IOD(Indian Ocean Dipole: temperature difference between western and eastern Indian Ocean):-%.2lf\n(3) SST_IO( Indian Ocean Sea Surface Temperature Anomaly):-%.2lf\n(4) ΔT(Average Temperature Anomaly of India):- %.2lf\n(5) AOD(Aerosol Optical Depth (air pollution)):- %.2lf\n(6) Number of Tropical Cyclones that hit or influenced India:- %.2lf\n(7) Increase in irrigation / urban area index:- %.2lf\n(8) Five Year Moving Average:- %.2lf\nCrisis Condition:-%s\n", year+2024, ENSO, IOD, SST_IO, DeltaT, AOD, Cyclones, LandUse, FiveYear_MA, tag);
+            // RAI holds rainfall for this year
+            printf("For Year %d:-\nAll-India average rainfall = %.2lf mm\n", year+2024, RAI);
+
+            fclose(fp);
+            return;
+        }
+    }
+    printf("Invalid Input:- Please enter year between 2025 to 2124.");
+
+    fclose(fp);
+}
+
 int resourceDistribution(){
-    int a;
     waterDistributionPerCapitaForIndia();
     population();
     waterCrisis();
-    return 0;
-}
+    rainfall_for_year();
 
-int regionalVariation(){
-   return 0; 
+    return 0;
 }
 
 int main(){
