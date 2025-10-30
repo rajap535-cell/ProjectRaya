@@ -169,8 +169,8 @@ int population(){
     }
 
     else{
-        printf("We don't have accurate estimate data for %d , after seeing decreasing fertility trends.", population_year);
-        printf("It is estimated by national and internaional organisations population of India will start to decrease from 2060.");
+        printf("We don't have accurate estimate data for %d, after seeing decreasing fertility trends.", population_year);
+        printf("It is estimated by national and internaional organisations population of India will start to decline from 2060.");
         printf("So, now, We can provide data here till 2060. Thank You!\n\n");
     }
     return 0;
@@ -210,33 +210,34 @@ int waterCrisis(){
         waterDemandForOtherUses = waterDemandForOtherUses + waterDemandForOtherUses * 1.34 /100;
         waterAvailability = waterAvailability - waterAvailability * 0.91/100;
         population = population + (population * percentage_change[demandYear - 2026])/100;
-     }
+        }
+        double totalDemand = waterDemandForAgri + waterDemandForIndustries + waterDemandForEnergy + waterDemandForDomestic + waterDemandForOtherUses;
+        double perCapitaWaterAvailibilityDomestic = waterAvailability / population - (totalDemand - waterDemandForDomestic) / (365 * population);
+
+        printf("Per capita water availability for Domestic Use for %d = %.2lf litre\n", demandYear, perCapitaWaterAvailibilityDomestic);
+        printf("Water Demand for Domestic Use for %d = %.2lf litre\n", demandYear, (waterDemandForDomestic/365)/population);
+
+        if(perCapitaWaterAvailibilityDomestic < (waterDemandForDomestic/365)/population){
+            printf("Water Crisis! We even donot have sufficient water for domestic use. Please, start water harvesting method and other methods to tackle water crisis. \nAnd Also donot waste water! Please, save water, save life!\n\n");
+        }
+        else{
+            printf("Presently, we have sufficient water for domectic use but we should cautions about future. So, please don't waste water! and start to save water!\nNote: This is average data. Water availability can be vary region to region.\n\n");
+        }
+
+        printf("Per capita total water availability (including for industries, agriculture, energy generation, domestic use etc.) for %d = %.2lf litre\n", demandYear, waterAvailability / population);
+        printf("Per capita total water Demand (including for industries, agriculture, energy generation, domestic use etc.) %d = %.2lf litre\n", demandYear, (totalDemand / 365)/ population);
+
+        if((totalDemand / 365)/ population >  waterAvailability){
+            printf("Water Crisis!  Urgent Action Needed. Please, Don't waste water! and start to save water!\n\n");
+        }
+        else{
+            printf("Presently, we have sufficient water but we should cautions about future.So, please don't waste water! and start to save water!\nNote: This is average data. Water availability can be vary region to region.\n\n");
+        }
     }
     
-    double totalDemand = waterDemandForAgri + waterDemandForIndustries + waterDemandForEnergy + waterDemandForDomestic + waterDemandForOtherUses;
-    double perCapitaWaterAvailibilityDomestic = waterAvailability / population - (totalDemand - waterDemandForDomestic) / (365 * population);
+    
 
-    printf("Per capita water availability for Domestic Use for %d = %.2lf litre\n", demandYear, perCapitaWaterAvailibilityDomestic);
-    printf("Water Demand for Domestic Use for %d = %.2lf litre\n", demandYear, (waterDemandForDomestic/365)/population);
-
-    if(perCapitaWaterAvailibilityDomestic < (waterDemandForDomestic/365)/population){
-        printf("Water Crisis! We even donot have sufficient water for domestic use. Please, start water harvesting method and other methods to tackle water crisis. \nAnd Also donot waste water! Please, save water, save life!\n\n");
-    }
-    else{
-        printf("Presently, we have sufficient water for domectic use but we should cautions about future. So, please don't waste water! and start to save water!\nNote: This is average data. Water availability can be vary region to region.\n\n");
-    }
-
-    printf("Per capita total water availability (including for industries, agriculture, energy generation, domestic use etc.) for %d = %.2lf litre\n", demandYear, waterAvailability / population);
-    printf("Per capita total water Demand (including for industries, agriculture, energy generation, domestic use etc.) %d = %.2lf litre\n", demandYear, (totalDemand / 365)/ population);
-
-    if((totalDemand / 365)/ population >  waterAvailability){
-        printf("Water Crisis!  Urgent Action Needed. Please, Don't waste water! and start to save water!\n\n");
-    }
-    else{
-        printf("Presently, we have sufficient water but we should cautions about future.So, please don't waste water! and start to save water!\nNote: This is average data. Water availability can be vary region to region.\n\n");
-    }
-
-    printf("Average per person per day demand for domestic use is set  for Rural Area =  %d litre  According to Ministry of Urban and Housing Affairs\n",waterDemandPerCapita_Rural2025);
+    printf("\nGeneral Information: Average per person per day demand for domestic use is set  for Rural Area =  %d litre  According to Ministry of Urban and Housing Affairs\n",waterDemandPerCapita_Rural2025);
     printf("Average per person per day demand for domestic use is set for Urban Area =  %d litre  According to Ministry of Urban and Housing Affairs\n\n",waterDemandPerCapita_Urban2025 );
 
     return 0;
@@ -251,6 +252,7 @@ void rainfall_for_year(){
     char line[256];
     fgets(line, sizeof(line), fp); 
     int x;
+    printf("For know All-India average rainfall and other factors that affect it.\n");
     printf("Enter the Year : ");
     scanf("%d", &x);
 
@@ -261,7 +263,7 @@ void rainfall_for_year(){
 
         sscanf(line, "%d,%lf,%lf,%lf,%lf,%lf,%lf,%lf,%lf,%lf,%s", &year, &ENSO, &IOD, &SST_IO, &DeltaT, &AOD, &Cyclones, &LandUse, &RAI, &FiveYear_MA, tag);
         if((year == (x -2024)) && (x < 2125) && (x > 2024)){
-            printf("Rainfall data with data of various factors that affect rainfall for %d\n(1) ENSO(El Niño-Southern Oscillation):- %.2lf\n(2) IOD(Indian Ocean Dipole: temperature difference between western and eastern Indian Ocean):-%.2lf\n(3) SST_IO( Indian Ocean Sea Surface Temperature Anomaly):-%.2lf\n(4) ΔT(Average Temperature Anomaly of India):- %.2lf\n(5) AOD(Aerosol Optical Depth (air pollution)):- %.2lf\n(6) Number of Tropical Cyclones that hit or influenced India:- %.2lf\n(7) Increase in irrigation / urban area index:- %.2lf\n(8) Five Year Moving Average:- %.2lf\nCrisis Condition:-%s\n", year+2024, ENSO, IOD, SST_IO, DeltaT, AOD, Cyclones, LandUse, FiveYear_MA, tag);
+            printf("Rainfall data with data of various factors that affect rainfall for %d\n(1) ENSO(El Nino-Southern Oscillation):- %.2lf\n(2) IOD(Indian Ocean Dipole: temperature difference between western and eastern Indian Ocean):- %.2lf\n(3) SST_IO( Indian Ocean Sea Surface Temperature Anomaly):-%.2lf\n(4) ΔT(Average Temperature Anomaly of India):- %.2lf\n(5) AOD(Aerosol Optical Depth (air pollution)):- %.2lf\n(6) Number of Tropical Cyclones that hit or influenced India:- %.2lf\n(7) Increase in irrigation / urban area index:- %.2lf\n(8) Five Year Moving Average:- %.2lf\nCrisis Condition:-%s\n", year+2024, ENSO, IOD, SST_IO, DeltaT, AOD, Cyclones, LandUse, FiveYear_MA, tag);
             // RAI holds rainfall for this year
             printf("For Year %d:-\nAll-India average rainfall = %.2lf mm\n", year+2024, RAI);
 
