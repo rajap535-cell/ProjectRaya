@@ -1,0 +1,83 @@
+Raya v1 — Development Summary Log
+
+Date: 24 October 2025
+Version: v1.0 (Stable working build)
+Branch: main
+
+1. Overview
+
+Raya v1 is a functional AI assistant with the following core features:
+
+Basic conversation handling
+
+QA engine integration
+
+Wikipedia search with relevance filtering
+
+News, date, and time commands
+
+Simple arithmetic and general knowledge queries
+
+Stock market and current event updates
+
+Ability to answer cultural, historical, and scientific questions
+
+2. Completed Features / Improvements
+
+Enhanced QA pipeline
+
+Fixed irrelevant Wikipedia answers
+
+Improved response flow for more accurate answers
+
+Wikipedia relevance filter
+
+Skips irrelevant pages automatically
+
+Stable core commands retained
+
+date, time, news, play, search
+
+Local caching implemented
+
+final_raya_cache.json and custom_db.sqlite maintained
+
+Error handling improvements
+
+Better fallback for unknown queries
+
+3. Merged Branches
+
+raya_local_changes merged into main
+
+Commit: "Enhanced QA pipeline and fixed Wikipedia relevance filter"
+
+4. Known Issues / To Do
+
+Arithmetic answers sometimes retrieved incorrectly from web sources
+
+Minor formatting and repeated output issues in RAYA.py console logs
+
+Memory, personality tone, and voice interface not yet implemented (planned for v2)
+
+5. Next Planned Build (Raya v2)
+
+Memory module — save conversation context for continuity
+
+Personality & tone customization — adjust AI style of replies
+
+Voice interface — text-to-speech and speech-to-text integration
+
+Improved QA engine — deeper reasoning, multi-step queries
+
+6. File Summary
+
+RAYA.py — main entry point
+
+raya_core/ — core modules: orchestrator, QA engine, cache, pipeline, aggregator
+
+RAYA/energy_sim/ — energy simulation modules
+
+custom_db.sqlite — local database for queries
+
+final_raya_cache.json — cache for QA results
