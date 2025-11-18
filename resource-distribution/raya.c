@@ -3,14 +3,14 @@
 
 
 int population(int year){
-    if(year > 1900 && year <= 2100){
-            FILE *fp = fopen("year_population.csv", "r");
+    if(year >= 1925 && year <= 2125){
+            FILE *fp = fopen("year_population_1925-2125.csv", "r");
             if (fp == NULL) {
                 perror("Error opening file");
                 exit(EXIT_FAILURE);
             }
             else{
-                char line[200];
+                char line[20];
                 fgets(line, sizeof(line), fp);
                 while (fgets(line, sizeof(line), fp)) {
                     int Year;
@@ -31,8 +31,8 @@ int population(int year){
 }
 
 int waterCrisis(int demandYear){
-        if(demandYear > 1900 && demandYear <= 2100){
-            FILE *fp = fopen("water_demand_supply.csv", "r");
+        if(demandYear >= 1925 && demandYear <= 2125){
+            FILE *fp = fopen("water_demand_supply_1925_2125.csv", "r");
             if (fp == NULL) {
                 perror("Error opening file");
                 exit(EXIT_FAILURE);
@@ -43,8 +43,9 @@ int waterCrisis(int demandYear){
                 while (fgets(line, sizeof(line), fp)) {
                     int Year;
                     double Total_Water_Availability_Litre,Water_Demand_Agriculture,Water_Demand_Industry,Water_Demand_Energy,Water_Demand_Domestic,Water_Demand_Other,PerCapita_Availability,PerCapita_Demand;
+                    char Crisis_Status[10] = " ";
                     int found = 0;
-                    sscanf(line, "%d,%lf,%lf,%lf,%lf,%lf,%lf,%lf,%lf,%lf,%s", &Year, &Total_Water_Availability_Litre, &Water_Demand_Agriculture, &Water_Demand_Industry, &Water_Demand_Energy, &Water_Demand_Domestic, &Water_Demand_Other, &PerCapita_Availability, &PerCapita_Demand);
+                    sscanf(line, "%d,%lf,%lf,%lf,%lf,%lf,%lf,%lf,%lf,%s", &Year, &Total_Water_Availability_Litre, &Water_Demand_Agriculture, &Water_Demand_Industry, &Water_Demand_Energy, &Water_Demand_Domestic, &Water_Demand_Other, &PerCapita_Availability, &PerCapita_Demand, Crisis_Status);
                     if (Year == demandYear) {
                         printf("Water Crisis details for: %d\n", Year);
                         printf("(1) Total Water Availability in Litre: %.2lf\n", Total_Water_Availability_Litre);
@@ -55,6 +56,7 @@ int waterCrisis(int demandYear){
                         printf("(6) Water Demand for Other: %.2lf\n", Water_Demand_Other);
                         printf("(7) PerCapita Water Availability: %.2lf\n", PerCapita_Availability);
                         printf("(8) PerCapita Water Demand: %.2lf\n", PerCapita_Demand);
+                        printf("(9) Crisis Status: %s\n", Crisis_Status);
                         printf("General Information: Average per person per day demand for domestic use is set  for Rural Area =  55 litre  According to Ministry of Urban and Housing Affairs\n");
                         printf("Average per person per day demand for domestic use is set for Urban Area =  135 litre  According to Ministry of Urban and Housing Affairs\n\n" );
                         found = 1;
@@ -68,8 +70,8 @@ int waterCrisis(int demandYear){
 }
 
 void rainfall_for_year(int year){
-    if(year > 1900 && year <= 2100){
-        FILE *fp = fopen("climate_rainfall_factors.csv", "r");
+    if(year >= 1925 && year <= 2125){
+        FILE *fp = fopen("climate_rainfall_factors _1925_2125.csv", "r");
         if (fp == NULL) {
             perror("Error opening file");
             exit(EXIT_FAILURE);
@@ -80,7 +82,7 @@ void rainfall_for_year(int year){
             while (fgets(line, sizeof(line), fp)) {
                 int Year;
                 double ENSO, IOD, SST_IO, DeltaT, AOD, Cyclones, LandUse, FiveYear_MA, Rainfall;
-                char Crisis_Status[20];
+                char Crisis_Status[10];
                 int found = 0;
                 sscanf(line, "%d,%lf,%lf,%lf,%lf,%lf,%lf,%lf,%lf,%lf,%s", &Year, &Rainfall, &ENSO, &IOD, &SST_IO, &DeltaT, &AOD, &Cyclones, &LandUse, &FiveYear_MA, Crisis_Status);
                 if (Year == year) {
@@ -107,23 +109,62 @@ void rainfall_for_year(int year){
     }
 }
 
+void rainfall_error(int year){
+    if(year >= 1925 && year <= 2025){
+        FILE *fp = fopen("rainfall_error_validation_1925_2025.csv", "r");
+        if (fp == NULL) {
+            perror("Error opening file");
+            exit(EXIT_FAILURE);
+        }
+        else{
+            char line[100];
+            fgets(line, sizeof(line), fp);
+            while (fgets(line, sizeof(line), fp)) {
+                int Year;
+                double Observed_Rainfall_mm,Predicted_Rainfall_mm,Error_pct;
+                char Crisis_Status[10];
+                int found = 0;
+                sscanf(line, "%d,%lf,%lf,%lf", &Year, &Observed_Rainfall_mm, &Predicted_Rainfall_mm, &Error_pct);
+                if (Year == year) {
+                    printf("Error or difference between Actual Rainfall and Predicted Rainfall for %d:\n", Year);
+                    printf("Factors:\n");
+                    printf("(1) Observed or Actual Rainfall: %.2lf\n", Observed_Rainfall_mm);
+                    printf("(2) Pridicted Rainfall: %.2lf\n", Predicted_Rainfall_mm);
+                    printf("(3) Error or difference between Actual Rainfall and Predicted Rainfall: %.2lf\n", Error_pct);
+                    found = 1;
+                    fclose(fp);
+                    return;
+                }
+            }  
+        }
+        fclose(fp);
+        return; 
+    }
+    else{
+        printf("We can calculate Error or difference between Actual Rainfall and Predicted Rainfall for past years only.\n");
+        printf("For future years we could only get predicted data.");
+        printf("\nSo, If You want to get Error or difference between Actual Rainfall and Predicted Rainfall, Please, give year between 1925 to 2025.\nThank You!");
+    }
+}
+
 int resourceDistribution(){
     int year;
-    printf("\nEnter the Year between 1901 and 2125.\n");
+    printf("\nEnter the Year between 1925 and 2125.\n");
     printf("For Exit Enter any Year beyond above range!\n");
     printf("Enter The Year:- ");
     scanf("%d", &year);
-    while(year > 1900 && year <= 2100){
+    while(year >= 1925 && year <= 2125){
         population(year);
         waterCrisis(year);
         rainfall_for_year(year);
-        printf("\nEnter the Year between 1901 and 2100.\n");
+        rainfall_error(year);
+        printf("\nEnter the Year between 1925 and 2125.\n");
         printf("For Exit Enter any Year beyond above range!\n");
         printf("Enter The Year:- ");
         scanf("%d", &year);
     }
-    if(!(year > 1900 && year <= 2100)){
-        printf("You given Input beyond given range, Thank You to visit!");
+    if(!(year >= 1925 && year <= 2125)){
+        printf("You have given Input beyond given range, Thank You to visit!");
         return 0;
     }
     return 0;
